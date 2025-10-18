@@ -1,18 +1,21 @@
 {
   "name": "inbox",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat ignition deploy ./ignition/modules/Inbox.js --network sepolia"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.19"
+  },
   "dependencies": {
-    "@truffle/hdwallet-provider": "2.1.15",
-    "ganache": "7.9.2",
-    "mocha": "10.8.2",
-    "solc": "0.8.19",
-    "web3": "4.16.0"
+    "dotenv": "^16.4.7"
   }
 }

@@ -1,5 +1,5 @@
 pragma solidity 0.8.19;
- 
+
 contract Inbox {
     string public message;
     
