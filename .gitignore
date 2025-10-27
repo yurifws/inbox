@@ -1,57 +1,69 @@
-# Hardhat files
-cache/
-artifacts/
-typechain/
-typechain-types/
-
-# Node modules
+# Dependências
 node_modules/
 
-# Environment variables
+# Arquivos compilados
+out/
+cache/
+cache_hardhat/
+
+# Foundry
+broadcast/
+!broadcast/.gitkeep
+
+# Dotenv - IMPORTANTE: Nunca commitar private keys!
 .env
 .env.local
 .env.*.local
 
-# Hardhat coverage
-coverage/
-coverage.json
-.coverage_artifacts/
-.coverage_cache/
-.coverage_contracts/
+# Hardhat (se ainda tiver restos)
+artifacts/
+typechain/
+typechain-types/
 
-# Gas reporter output
-gasReporterOutput.json
-
-# Hardhat deployment files (opcional - alguns projetos commitam)
-deployments/**/solcInputs
-deployments/**/*.dbg.json
-
-# Logs
+# Arquivos de log
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
 
-# OS files
+# Arquivos do sistema operacional
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+*~
 
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.project
+.classpath
+.settings/
 
-# Build files
-dist/
-build/
-out/
+# Foundry específico
+lcov.info
+report/
 
-# Temporary files
+# Slither (se usar)
+.slither/
+crytic-export/
+
+# Mythril (se usar)
+.mythril/
+
+# Cobertura
+coverage/
+coverage.json
+
+# Gas reports
+.gas-snapshot
+
+# Arquivos temporários
 tmp/
 temp/
-
-# Hardhat Ignition default folder
-ignition/deployments/
