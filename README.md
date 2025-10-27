@@ -1,54 +1,66 @@
-# Inbox Smart Contract
+## Foundry
 
-Simple smart contract for storing and managing messages on the Ethereum blockchain.
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-## Installation
+Foundry consists of:
 
-```bash
-npm install
+- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+
+## Documentation
+
+https://book.getfoundry.sh/
+
+## Usage
+
+### Build
+
+```shell
+$ forge build
 ```
 
-## Setup
+### Test
 
-Create a `.env` file:
-
-```
-PRIVATE_KEY=your_private_key
-INFURA_API_KEY=your_api_key
+```shell
+$ forge test
 ```
 
-## Commands
+### Format
 
-```bash
-# Compile contracts
-npx hardhat compile
-
-# Run tests
-npx hardhat test
-
-# Local deployment
-npx hardhat node
-npx hardhat run scripts/deploy.js --network localhost
-
-# Testnet deployment
-npx hardhat run scripts/deploy.js --network sepolia
+```shell
+$ forge fmt
 ```
 
-## Structure
+### Gas Snapshots
 
-```
-contracts/     # Solidity contracts
-test/          # Tests
-scripts/       # Deployment scripts
-ignition/      # Deployment modules
+```shell
+$ forge snapshot
 ```
 
-## Tech Stack
+### Anvil
 
-- Solidity
-- Hardhat
-- Node.js
+```shell
+$ anvil
+```
 
-## License
+### Deploy
 
-MIT
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
